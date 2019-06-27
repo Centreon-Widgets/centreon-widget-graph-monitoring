@@ -48,7 +48,7 @@ require_once $centreon_path . 'www/class/centreonACL.class.php';
 require_once $centreon_path . 'www/class/centreonHost.class.php';
 require_once $centreon_path . 'www/class/centreonService.class.php';
 require_once $centreon_path . 'www/class/centreonExternalCommand.class.php';
-require_once $centreon_path . 'www/class/centreonGraph.class.php';
+require_once $centreon_path . 'www/class/centreonGraphNg.class.php';
 
 CentreonSession::start(1);
 
