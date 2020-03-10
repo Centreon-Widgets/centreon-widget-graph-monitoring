@@ -72,7 +72,7 @@ try {
     
     $autoRefresh = filter_var($preferences['refresh_interval'], FILTER_VALIDATE_INT);
 
-    if ($autoRefresh === false || $autoRefresh < 5){
+    if ($autoRefresh === false || $autoRefresh < 5) {
         $autoRefresh = 30;
     }
 
@@ -104,9 +104,9 @@ if (isset($tab[0]) && isset($tab[1]) && $centreon->user->admin == 0) {
         AND group_id IN (:groupList)";
 
     $res = $dbAcl->prepare($sql);
-    $res->bindValue(':hostId',$tab[0],PDO::PARAM_INT);
-    $res->bindValue(':serviceId',$tab[1],PDO::PARAM_INT);
-    $res->bindValue(':groupList',$grouplistStr,PDO::PARAM_STR);
+    $res->bindValue(':hostId', $tab[0], PDO::PARAM_INT);
+    $res->bindValue(':serviceId', $tab[1], PDO::PARAM_INT);
+    $res->bindValue(':groupList', $grouplistStr, PDO::PARAM_STR);
     $res->execute();
 
     if (!$res->rowCount()) {
