@@ -76,7 +76,7 @@ try {
         $autoRefresh = 30;
     }
 } catch (Exception $e) {
-    echo $e->getMessage()."<br/>";
+    echo $e->getMessage() . "<br/>";
     exit;
 }
 
